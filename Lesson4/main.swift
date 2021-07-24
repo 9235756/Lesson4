@@ -27,7 +27,6 @@ enum tent: String {                                                 //матер
     case tkan = "Ткань", metal = "Металл"
 }
 
-
 class Car {                                                 //описываем и иниц класс Car
     var mark: markAuto
     var year: Int
@@ -44,7 +43,6 @@ class Car {                                                 //описываем
         self.windows = windows
         self.zapolnenbagage = zapolnenbagage
     }
-    
 }
 
 class SportCar: Car {                               //содаем класс наследник спорткар
@@ -65,7 +63,6 @@ class SportCar: Car {                               //содаем класс н
         spoler = .vidvenut
         print("Сполер выдвинут")
     }
-    
 }
     
 
@@ -87,18 +84,20 @@ class TrunkCar: Car {                               //содаем класс н
         nalichieTenta = .metal
         print("У грузовика металлический тент")
     }
-    
 }
 
 let spcar = SportCar (mark: .bentley, year: 2015, vbagage: 200, engine: .otkluchen, windows: .zakrito, zapolnenbagage: 0, spoler: .spriatan)  //Создали автомобиль
 print("Спорткар \(spcar.mark) | \(spcar.year) выпуска | \(spcar.vbagage) л багажник |  двигатель \(spcar.engine.rawValue) | окна \(spcar.windows.rawValue) | В багажнике \(spcar.zapolnenbagage) л | Спойлер \(spcar.spoler.rawValue) ")
+
 print (" ")
 spcar.soplerStatusVidvinut()                         //Выдвинули сполер
+
 print (" ")
 spcar.zapolnenbagage = 50                            //Загрузили 50 л в багажник
 print("В багажник загрузили \(spcar.zapolnenbagage) л")
 
 spcar.engine = .rabotaet                             //Завели спорткар
+
 print (" ")
 print("Спорткар \(spcar.mark) | \(spcar.year) выпуска | \(spcar.vbagage) л багажник |  двигатель \(spcar.engine.rawValue) | окна \(spcar.windows.rawValue) | В багажнике \(spcar.zapolnenbagage) л | Спойлер \(spcar.spoler.rawValue) ")
 
@@ -110,6 +109,7 @@ print("Грузовик \(tcar.mark) | \(tcar.year) выпуска | \(tcar.vbag
 print (" ")
 tcar.engine = .rabotaet
 tcar.tentStatusMetal()
+
 print (" ")
 print("Грузовик \(tcar.mark) | \(tcar.year) выпуска | \(tcar.vbagage) л багажник |  двигатель \(tcar.engine.rawValue) | окна \(tcar.windows.rawValue) | В багажнике \(tcar.zapolnenbagage) л | Тент \(tcar.nalichieTenta.rawValue) ")
 
