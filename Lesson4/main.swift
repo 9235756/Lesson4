@@ -27,7 +27,6 @@ enum tent: String {                                                 //матер
     case tkan = "Ткань", metal = "Металл"
 }
 
-
 class Car {                                                 //описываем и иниц класс Car
     var mark: markAuto
     var year: Int
